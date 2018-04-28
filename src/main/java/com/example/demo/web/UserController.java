@@ -57,4 +57,8 @@ public class UserController {
         users.remove(id);
         return "success";
     }
+
+    public void select() {
+        //doSomething
+    }
 }
