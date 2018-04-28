@@ -12,9 +12,25 @@ import java.util.Map;
 public class PeopleController {
     @Autowired
     PeopleRepository peopleRepository;
+    @Autowired
+    People people;
+
     @RequestMapping("/test")
     public  People testDb(Map<String,Object> model){
         People people = peopleRepository.findPeopleById(1);
+        return people;
+    }
+
+    @RequestMapping("/save")
+    public People saveDb(){
+        people.setName("LT");
+        people.setAge(24);
+        people.setAddress("xx");
+        people.setEmail("??");
+        people.setMemo("haha");
+        people.setSalary(13000f);
+        people.setSex("girl");
+        peopleRepository.save(people);
         return people;
     }
 

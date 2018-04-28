@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PeopleRepository extends CrudRepository<People,Integer> {
     People findPeopleById(Integer id);
+    People save(People people);
 }
