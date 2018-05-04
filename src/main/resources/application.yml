@@ -9,6 +9,8 @@ eureka:
     #Eureka Server的访问地址，服务注册和client获取服务注册信息均通过该URL，多个服务注册地址用,隔开
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
 
 
 #Spring 配置文件
